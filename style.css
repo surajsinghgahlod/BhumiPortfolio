@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #121212;
+    color: #fff;
+}
+header{
+    padding: 30px 80px;
+}
+h4{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+h1{
+    font-family: Poppins;
+    font-size: 198px;
+    font-weight: 600;
+    line-height: 297px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: -48px;
+}
+h1::after{
+    content: url('./img/profile.png');
+    position: absolute;
+    top: 135px;
+    left: 440px;
+    width: 216px;
+    height: 300px;
+}
+ h1::before{
+    content: url('./img/small-hr.png');
+    position: absolute;
+    top: 0;
+    right: 55px;
+    width: 105px;
+    height: 1.5px;
+ }
+.outlined{
+    color: transparent;
+    -webkit-text-stroke: 2px #FFD1DC;
+    font-family: Poppins;
+    font-size: 198px;
+    font-weight: 600;
+    line-height: 297px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.surname{
+    font-family: Poppins;
+    font-size: 71.4px;
+    font-weight: 600;
+    line-height: 107.09px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;  
+    margin-left: -36px;  
+}
+.banner-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p{
+    font-family: Nunito Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.55px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 60px;
+    max-width: 310px;
+}
+.btn{
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.82px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.btn-filled{
+    background-color: #FFD1DC;
+    color: #000;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid #FFD1DC;
+    color: #fff;
+}
+img.banner-side{
+    height: 285px;
+    width: 285px;
+    /* animation: rotate 3s linear infinite; */
+}
+/* @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+img.banner-side-icon{
+    position: absolute;
+    top: 139px;
+    left: 131px;
+}
+section{
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 1000%;
+    width: 100%;
+}
+h2{
+    font-family: Poppins;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 63px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    position: relative;
+}
+h2::after{
+    content: url('./img/work.svg');
+    position: absolute;
+    left:0;
+    top: -32px;
+}
+.tabs-container {
+    font-family: Poppins;
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto 40px auto;
+    max-width: 400px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    min-width: 160px;
+    color: #595959;
+    text-align: center;
+}
+
+.tab.active {
+    color: #FFC0CB;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+}
+.tab-content-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+hr{
+    height: 18px;
+    border: 0.5px solid #fff;
+    opacity: 0.3;
+}
+.work-card{
+    margin-bottom: 20px;
+}
+.work-box{
+    height: 310px;
+    width: 410px;
+    background-color: #FFC0CB;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.work-title{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 12px 0 2px 0;
+}
+.work-type{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;  
+    opacity: 0.7;  
+}

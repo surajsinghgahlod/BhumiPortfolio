@@ -19,7 +19,7 @@ h4{
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-h1{
+h1.header-lg-name{
     font-family: Poppins;
     font-size: 198px;
     font-weight: 600;
@@ -31,7 +31,7 @@ h1{
     position: relative;
     margin-top: -48px;
 }
-h1::after{
+h1.header-lg-name::after{
     content: url('./img/profile.png');
     position: absolute;
     top: 135px;
@@ -39,14 +39,14 @@ h1::after{
     width: 216px;
     height: 300px;
 }
- h1::before{
+ /* h1::before{
     content: url('./img/small-hr.png');
     position: absolute;
     top: 0;
     right: 55px;
     width: 105px;
     height: 1.5px;
- }
+ } */
 .outlined{
     color: transparent;
     -webkit-text-stroke: 2px #FFD1DC;
@@ -104,11 +104,11 @@ p{
     background-color: #FFD1DC;
     color: #000;
 }
-.btn:hover{
+/* .btn:hover{
     background-color: transparent;
     border: 1px solid #FFD1DC;
     color: #fff;
-}
+} */
 img.banner-side{
     height: 285px;
     width: 285px;
@@ -133,9 +133,13 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 1000%;
+    height: 100%;
     width: 100%;
 }
+/* .container{
+    width: 100%;
+    max-width: 1240px;
+} */
 h2{
     font-family: Poppins;
     font-size: 42px;
@@ -146,11 +150,29 @@ h2{
     text-align: center;
     position: relative;
 }
-h2::after{
+h2.work-speaks::after{
     content: url('./img/work.svg');
     position: absolute;
     left:0;
     top: -32px;
+}
+h2.creative-toolbox::after{
+    content: url('./img/toolbox-skill.svg');
+    position: absolute;
+    left: 40px;
+    top: -32px;
+}
+h2.about-me::after{
+    content: url('./img/about-me.svg');
+    position: absolute;
+    left:0;
+    top: -32px;
+}
+h2.creative-toolbox{
+    margin-bottom: 48px;
+}
+h2.about-me{
+    margin-bottom: 28px;
 }
 .tabs-container {
     font-family: Poppins;
@@ -162,7 +184,6 @@ h2::after{
     align-items: center;
     justify-content: space-between;
     margin: 30px auto 40px auto;
-    max-width: 400px;
 }
 
 .tab {
@@ -233,3 +254,162 @@ hr{
     text-decoration-skip-ink: none;  
     opacity: 0.7;  
 }
+.tools{
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.65px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+img.skill-design-icon{
+    width: 24px;
+    height: 24px;
+}
+.skill-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #1A1A1A;
+    border-radius: 15px;
+    height: 260px;
+    width: 220px;
+    flex-grow: 1;
+}
+img.skill-icon{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.skill-name{
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 30px;
+}
+.progress-container {
+    width: 180px;
+    height: 25px;
+    background-color: #222222;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background-color: #312F30;
+    border-radius: 25px 0 0 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .progress-text {
+    position: relative;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    z-index: 1;
+  }
+  .about-container{
+    display: flex;
+  }
+  h5{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 39px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFC0CB;
+  }
+li.hobbies-list{
+    font-family: Nunito Sans;
+    font-size: var(--fontsize24);
+    font-weight: 700;
+    line-height: 33.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the year box and content */
+  }
+
+  .year-box {
+    padding: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background-color: #191919;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .company-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .duration {
+    font-size: 16px;
+    color: #BEBEBE; /* Light gray for duration text */
+    margin: 5px 0 0;
+  }
+
+  .timeline-line {
+    position: absolute;
+    border-left: 1px dashed #444444 !important;
+    height: 100px;
+    top: 80px;
+    left: 40px;
+  }
+  .footer-lg-conent {
+    font-family: 'Poppins', sans-serif; /* Poppins font family */
+    font-size: 164.44px; /* Font size */
+    font-weight: 800; /* Bold text */
+    line-height: 246.66px; /* Line height */
+    text-align: left; /* Align text to the left */
+    color: transparent; /* Make text color transparent */
+    -webkit-text-stroke: 1.49px rgba(255, 255, 255, 0.3); /* Text stroke color and width */
+    text-decoration: none; /* No underline */
+    border: 1.49px solid; /* Border width */
+    border-image-source: linear-gradient(194.39deg, #FFFFFF 8.9%, rgba(255, 255, 255, 0) 88.45%);
+    border-image-slice: 1; /* Ensure gradient spans the border */
+    -webkit-background-clip: text; /* Clip the gradient within the text */
+    background-clip: text;
+  }

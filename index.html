@@ -18,19 +18,19 @@
 <body>
     <header>
         <h4>👋 Hello, it’s me</h4>
-        <h1>Bhumi<span class="outlined">ka</span> <span class="surname">YADAV</span></h1>
+        <h1 class="header-lg-name">Bhumi<span class="outlined">ka</span> <span class="surname">YADAV</span></h1>
         <div class="banner-content">
             <div style="height: 100%;">
                 <p>A passionate UI/UX designer who turns ideas into visually stunning and user-centric digital experiences.</p>
-                <div>
+                <div style="display: flex; align-items: center;">
                     <button type="button" class="btn btn-filled" >Let’s Connect</button>
-                    <button type="button" class="btn" >Download CV</button>
+                    <button type="button" class="btn" style="display: flex; align-items: center; justify-content: space-between;"><img src="./img/download.svg" alt="download" style="margin-right: 10px;"> Download CV</button>
                 </div>
                 <div style="margin-top: 196px">
-                    <button type="button" style="background:transparent; cursor:pointer; border:none"><img src="./img/mail.svg" alt="mail"></button>
-                    <button type="button" style="background:transparent; cursor:pointer; border:none"><img src="./img/insta.svg" alt="insta"></button>
-                    <button type="button" style="background:transparent; cursor:pointer; border:none"><img src="./img/behance.svg" alt="behance"></button>
-                    <button type="button" style="background:transparent; cursor:pointer; border:none"><img src="./img/linkedin.svg" alt="linkedin"></button>
+                    <button type="button" style="background:transparent; cursor:pointer; border:none; margin-right: 8px;"><img src="./img/mail.svg" alt="mail"></button>
+                    <button type="button" style="background:transparent; cursor:pointer; border:none; margin-right: 8px;"><img src="./img/insta.svg" alt="insta"></button>
+                    <button type="button" style="background:transparent; cursor:pointer; border:none; margin-right: 8px;"><img src="./img/behance.svg" alt="behance"></button>
+                    <button type="button" style="background:transparent; cursor:pointer; border:none; margin-right: 8px;"><img src="./img/linkedin.svg" alt="linkedin"></button>
                     <img src="./img/large-hr.svg" alt="large-hr" style="margin: 14px;">
                 </div>
             </div>
@@ -41,10 +41,11 @@
 
         </div>
     </header>
+
     <section style="margin-top: 80px;">
-        <h2>My Work Speaks</h2>
+        <h2 class="work-speaks">My Work Speaks</h2>
         <div>
-            <div class="tabs-container">
+            <div class="tabs-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center">
                 <!-- Tabs -->
                 <div class="tabs">
                     <div class="tab active" data-target="tab1">All Projects</div>
@@ -66,14 +67,14 @@
                         <div class="work-type">Web Design</div>
                     </div>
                     <div class="work-card">
-                        <div class="work-box">
+                        <div class="work-box" style="justify-content: end;">
                             <img src="./img/project-dental.png" alt="project-dental">
                         </div>
                         <div class="work-title">Dental website Design</div>
                         <div class="work-type">Web Design</div>
                     </div>
                     <div class="work-card">
-                        <div class="work-box">
+                        <div class="work-box" style="justify-content: end;">
                             <img src="./img/project-graphic.png" alt="project graphic">
                         </div>
                         <div class="work-title">Promotional Graphics</div>
@@ -87,7 +88,7 @@
                         <div class="work-type">Web Design</div>
                     </div>
                     <div class="work-card">
-                        <div class="work-box">
+                        <div class="work-box" style="justify-content: end;">
                             <img src="./img/project2.png" alt="project-2">
                         </div>
                         <div class="work-title">Dental website Design</div>
@@ -111,7 +112,7 @@
                         <div class="work-type">Web Design</div>
                     </div>
                     <div class="work-card">
-                        <div class="work-box">
+                        <div class="work-box" style="justify-content: end;">
                             <img src="./img/project-dental.png" alt="project-dental">
                         </div>
                         <div class="work-title">Dental website Design</div>
@@ -125,7 +126,7 @@
                         <div class="work-type">Web Design</div>
                     </div>
                     <div class="work-card">
-                        <div class="work-box">
+                        <div class="work-box" style="justify-content: end;">
                             <img src="./img/project2.png" alt="project-2">
                         </div>
                         <div class="work-title">Dental website Design</div>
@@ -143,7 +144,7 @@
                 </div>
                 <div class="tab-content" id="tab4">
                     <div class="work-card">
-                        <div class="work-box">
+                        <div class="work-box" style="justify-content: end;">
                             <img src="./img/project-graphic.png" alt="project graphic">
                         </div>
                         <div class="work-title">Promotional Graphics</div>
@@ -153,6 +154,106 @@
             </div>
         </div>
     </section>
+
+    <section style="margin: 80px 0; padding:0;">
+        <h2 class="creative-toolbox">My Creative Toolbox</h2>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; background-color: #1A1A1A; width: 100%; padding: 16px 12px; margin-bottom: 28px;">
+            <div class="tools">User Interface Design</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">Interaction Design</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">Responsive Web Design</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">UX Audit</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">Graphics design</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">Mobile UI</div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; background-color: #1A1A1A; width: 100%; padding: 16px 12px; ">
+            <div class="tools">Wireframes</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">UX Optimization</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">UX Audit</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">Prototyping</div>
+            <img src="./img/theme-icon.png" alt="theme-icon" class="skill-design-icon">
+            <div class="tools">Basic knowledge of HTML/ CSS</div>
+        </div>
+        <div style="margin-top: 80px; display: flex; align-items: center; gap: 24px;" class="container">
+            <div class="skill-box">
+                <img src="./img/figma.svg" alt="figma" class="skill-icon">
+                <div class="skill-name">Figma</div>
+                <div class="progress-container">
+                    <div class="progress-fill" style="width: 98%;"></div>
+                    <div class="progress-text">98%</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <img src="./img/photoshop.png.svg" alt="photoshop.png" class="skill-icon">
+                <div class="skill-name">Photoshop</div>
+                <div class="progress-container">
+                    <div class="progress-fill" style="width: 87%;"></div>
+                    <div class="progress-text">87%</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <img src="./img/xd.png.svg" alt="xd" class="skill-icon">
+                <div class="skill-name">XD</div>
+                <div class="progress-container">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                    <div class="progress-text">85%</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <img src="./img/canva.svg" alt="canva" class="skill-icon">
+                <div class="skill-name">Canva</div>
+                <div class="progress-container">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                    <div class="progress-text">80%</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <img src="./img/miro.svg" alt="miro" class="skill-icon">
+                <div class="skill-name">Miro</div>
+                <div class="progress-container">
+                    <div class="progress-fill" style="width: 70%;"></div>
+                    <div class="progress-text">70%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="display: block; margin-bottom: 80px;" class="container">
+        <h2 class="about-me" style="text-align: left;">Know more about me</h2>
+        <div class="about-container">
+            <div style="flex: 1;">
+                <h5 style="margin-bottom: 16px;">Experience</h5>
+                <div class="timeline-item">
+                    <div class="year-box">2024</div>
+                    <div class="timeline-line"></div>
+                    <div class="content">
+                      <p class="company-name">UI UX Studio pvt ltd</p>
+                      <p class="duration">1 year</p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <h5 style="margin-bottom: 16px;">Beyond the Screen</h5>
+                <ul>
+                    <li class="hobbies-list"><img src="./img/travel.svg" alt="travel" style="margin-right: 10px; height: 24px; width: 24px;">Travelling</li>
+                    <li class="hobbies-list"><img src="./img/reading.svg" alt="reading" style="margin-right: 10px; height: 24px; width: 24px;">Book Reading</li>
+                    <li class="hobbies-list"><img src="./img/drawing.svg" alt="drawing" style="margin-right: 10px; height: 24px; width: 24px;">Drawing</li>
+                    <li class="hobbies-list"><img src="./img/writing.svg" alt="writing" style="margin-right: 10px; height: 24px; width: 24px;">Writing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h1 class="footer-lg-conent">LET'S CONNECT</h1>
+    </footer>
 
 
     <!-- TAB JS  -->

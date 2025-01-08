@@ -99,10 +99,19 @@ p{
     border: 1px solid transparent;
     margin-right: 16px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 .btn-filled{
     background-color: #FFD1DC;
     color: #000;
+}
+.btn-filled:hover{
+    border: 1px solid #FFD1DC;
+    background-color: transparent;
+    color: #FFD1DC;
+}
+.btn:hover{
+    color: #FFD1DC;
 }
 /* .btn:hover{
     background-color: transparent;
@@ -136,10 +145,6 @@ section{
     height: 100%;
     width: 100%;
 }
-/* .container{
-    width: 100%;
-    max-width: 1240px;
-} */
 h2{
     font-family: Poppins;
     font-size: 42px;
@@ -224,11 +229,11 @@ hr{
     opacity: 0.3;
 }
 .work-card{
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 .work-box{
-    height: 310px;
-    width: 410px;
+    min-height: 310px;
+    min-width: 410px;
     background-color: #FFC0CB;
     border-radius: 10px;
     cursor: pointer;
@@ -277,7 +282,6 @@ img.skill-design-icon{
     border-radius: 15px;
     height: 260px;
     width: 220px;
-    flex-grow: 1;
 }
 img.skill-icon{
     width: 50px;
@@ -398,18 +402,279 @@ li.hobbies-list{
     top: 80px;
     left: 40px;
   }
-  .footer-lg-conent {
-    font-family: 'Poppins', sans-serif; /* Poppins font family */
-    font-size: 164.44px; /* Font size */
-    font-weight: 800; /* Bold text */
-    line-height: 246.66px; /* Line height */
-    text-align: left; /* Align text to the left */
-    color: transparent; /* Make text color transparent */
-    -webkit-text-stroke: 1.49px rgba(255, 255, 255, 0.3); /* Text stroke color and width */
-    text-decoration: none; /* No underline */
-    border: 1.49px solid; /* Border width */
-    border-image-source: linear-gradient(194.39deg, #FFFFFF 8.9%, rgba(255, 255, 255, 0) 88.45%);
-    border-image-slice: 1; /* Ensure gradient spans the border */
-    -webkit-background-clip: text; /* Clip the gradient within the text */
-    background-clip: text;
-  }
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+.footer-connect{
+    height: 118px;
+    width: 90%;
+}
+
+
+/* Responsive Queries */
+@media (max-width: 768px) { /* Tablet View */
+    section {
+        padding: 30px 20px; /* Smaller padding */
+    }
+    .about-container {
+        gap: 30px; /* Add spacing between stacked items */
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    h2.about-me {
+        font-size: 24px; /* Adjust main heading size */
+        line-height: 32px;
+    }
+    .timeline-line{
+        display: none;
+    }
+    .footer-connect{
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile View */
+    section {
+        padding: 20px; /* Minimal padding for mobile */
+    }
+    h2.about-me {
+        font-size: 20px; /* Further reduce heading size */
+        line-height: 28px;
+    }
+    .year-box {
+        width: 50px; /* Smaller year-box */
+        height: 50px;
+        font-size: 14px; /* Adjust font size */
+    }
+    .timeline-line {
+        left: 25px; /* Adjust position of the timeline line */
+    }
+    .company-name {
+        font-size: 14px;
+    }
+    .duration {
+        font-size: 12px;
+    }
+    li.hobbies-list {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    li.hobbies-list img {
+        margin-right: 6px;
+        height: 18px; /* Adjust icon size */
+        width: 18px;
+    }
+    .footer-connect{
+        height: 50px;
+    }
+    footer{
+        padding: 20px 0;
+    }
+    .skill-box{
+        width: 200px;
+        height: 200px;
+    }
+}
+/* Adjust skill layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .skill-box {
+        width: 180px;
+        height: 240px;
+    }
+
+    img.skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-name {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+
+    .progress-container {
+        width: 150px;
+        height: 20px;
+    }
+
+    .progress-text {
+        font-size: 12px;
+    }
+}
+
+/* Stack the toolbox items vertically on mobile screens */
+@media screen and (max-width: 576px) {
+    .tools {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    img.skill-design-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .skill-container{
+        margin: 30px 20px 0 20px;
+    }
+    .skill-box {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        padding: 15px;
+    }
+
+    img.skill-icon {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 15px;
+    }
+
+    .skill-name {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .progress-container {
+        width: 100%;
+        height: 18px;
+    }
+
+    .progress-text {
+        font-size: 10px;
+    }
+    section div.toolbox-box {
+        flex-direction: column;
+        margin-bottom: 0!important;
+    }
+
+    .tools {
+        margin-bottom: 8px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .tab-content{
+        flex-direction: column;
+    }
+}
+@media (max-width: 576px){
+    .tab-content, .tabs{
+        flex-direction: column;
+    }
+    hr{
+        rotate: 90deg;
+    }
+}
+
+/* Responsive Styles */
+
+/* For Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    h1.header-lg-name {
+        font-size: 120px;
+        line-height: 180px;
+    }
+
+    .outlined {
+        font-size: 120px;
+        line-height: 180px;
+    }
+
+    .surname {
+        font-size: 48px;
+        line-height: 70px;
+        margin-left: 0;
+    }
+
+    .banner-content {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 280px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+    .btn-filled {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+    img.banner-side {
+        height: 200px;
+        width: 200px;
+    }
+
+    .social-btns {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* For Small Screens (Mobile) */
+@media (max-width: 480px) {
+    h4 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h1.header-lg-name {
+        font-size: 80px;
+        line-height: 120px;
+    }
+
+    .outlined {
+        font-size: 80px;
+        line-height: 120px;
+    }
+
+    .surname {
+        font-size: 36px;
+        line-height: 54px;
+        margin-left: 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 260px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+    .btn-filled {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+    img.banner-side {
+        height: 160px;
+        width: 160px;
+    }
+
+    .banner-side-icon {
+        top: 110px;
+        left: 90px;
+    }
+
+    .social-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

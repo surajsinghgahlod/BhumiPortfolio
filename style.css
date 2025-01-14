@@ -7,8 +7,32 @@ body{
     background-color: #121212;
     color: #fff;
 }
+button:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
 header{
-    padding: 30px 80px;
+    height: 100vh;
+}
+.banner-web-container, .banner-mobile-container{
+    position: relative;
+}
+img.banner-web, img.banner-mobile{
+    position: absolute;
+    top: 32px; /* Aligns to the top of the parent container */
+    left: 49.5%; /* Moves the image to the horizontal center */
+    transform: translateX(-50%); /* Centers the image horizontally */
+    width: 90vw;
+    height: auto; /* Optional: Maintain aspect ratio */
+}
+.banner-mobiles{
+    width: 95vw;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.banner-mobile-container{
+    display: none;
 }
 h4{
     font-family: Poppins;
@@ -72,6 +96,9 @@ h1.header-lg-name::after{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 32px 80px;
+    position: relative;
+    top: 300px;
 }
 p{
     font-family: Nunito Sans;
@@ -230,16 +257,32 @@ hr{
 }
 .work-card{
     margin-bottom: 20px !important;
+    min-width: 340px;
 }
 .work-box{
     min-height: 310px;
-    min-width: 410px;
+    /* min-width: 210px; */
     background-color: #FFC0CB;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.work-box img{
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+}
+.work-card {
+    position: relative;
+    overflow: hidden; /* Ensures the image doesn't grow beyond the card */
+}
+.work-box img {
+    transition: transform 0.3s ease-in-out; /* Smooth grow effect */
+}
+.work-card:hover .work-box img {
+    transform: scale(1.1); /* Increase the size of the image */
 }
 .work-title{
     font-family: Poppins;
@@ -414,9 +457,28 @@ footer{
     width: 90%;
 }
 
+.banner-social-container{
+    margin-top: 196px;
+}
 
 /* Responsive Queries */
 @media (max-width: 768px) { /* Tablet View */
+    .work-card{
+        min-width: unset !important;
+    }
+    img.banner-side-icon{
+        top: 98px;
+        left: 92px;
+        height: 16px;
+        width: 16px;
+    }
+    .banner-social-container{
+        margin-top: 80px;
+    }
+    .banner-content{
+        top: 400px;
+        /* flex-direction: column; */
+    }
     section {
         padding: 30px 20px; /* Smaller padding */
     }
@@ -438,13 +500,77 @@ footer{
     }
 }
 
+
 @media (max-width: 480px) { /* Mobile View */
+    header{
+        max-height: 100vh;
+        height: 100%;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h2.about-me::after{
+        top: -16px;
+        transform: scale(0.5); /* Adjust the scale factor to decrease size */
+        transform-origin: top left; /* Set origin for scaling */
+    }
+    h2.creative-toolbox::after{
+        left: 68px;
+        top: -10px;
+        transform: scale(0.5); /* Adjust the scale factor to decrease size */
+        transform-origin: top left; /* Set origin for scaling */
+    }
+    h2.work-speaks::after{
+        left: 40px;
+        top: -10px;
+        transform: scale(0.5); /* Adjust the scale factor to decrease size */
+        transform-origin: top left; /* Set origin for scaling */
+    }
+    .work-box{
+        padding: 20px;
+        min-width: 100%;
+        min-height: 100%;
+        /* width: 280px; */
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+    }
+    .work-box img{
+        /* width: 240px; */
+        width: 100%;
+        height: auto;
+    }
+    .work-card{
+        /* width: 240px !important; */
+        width: 100%;
+        height: auto !important;
+    }
+    .responsive-p{
+        margin-bottom: 20px;
+    }
+    .banner-social-container{
+        margin-top: 24px;
+    }
+    .responsive-btn-container{
+        justify-content: center;
+    }
+    img.banner-side-icon, .large-hr, .banner-side{
+        display: none;
+    }
+    .banner-content{
+        top: 0;
+    }
+    .banner-web-container{
+        display: none;
+    }
+    .banner-mobile-container{
+        display: block;
+    }
+    img.banner-mobile{
+        top: 20px ;
+    }
     section {
         padding: 20px; /* Minimal padding for mobile */
-    }
-    h2.about-me {
-        font-size: 20px; /* Further reduce heading size */
-        line-height: 28px;
     }
     .year-box {
         width: 50px; /* Smaller year-box */
@@ -478,6 +604,16 @@ footer{
     .skill-box{
         width: 200px;
         height: 200px;
+    }
+    /* img.work-img{
+        width: 100% !important;
+        max-width: 120px !important;
+        height: auto !important;
+    } */
+    .work-card{
+        /* max-width: 180px !important; */
+        width: 100%;
+        height: auto !important;
     }
 }
 /* Adjust skill layout for smaller screens */
@@ -676,5 +812,15 @@ footer{
     .social-btns {
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .responsive-btn-container{
+        flex-direction: column;
+        align-items: start !important;
+        justify-content: flex-start;
+        gap: 12px;
     }
 }

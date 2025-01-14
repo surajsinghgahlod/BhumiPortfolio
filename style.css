@@ -251,7 +251,7 @@ h2.about-me{
     gap: 24px;
 }
 hr{
-    height: 18px;
+    height: 18px !important;
     border: 0.5px solid #fff;
     opacity: 0.3;
 }
